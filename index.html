@@ -16,22 +16,20 @@
       font-size: 1.2em;
       text-align: left;
     }
-    /* Flex container for icon + heading */
-    .header-container {
-      display: flex;
-      align-items: center;
-      margin-bottom: 2rem;
-      gap: 0.5rem; /* spacing between icon and text */
+    /* Style for the icon above heading */
+    .icon-container {
+      text-align: left; /* aligns icon with heading text */
+      margin-bottom: 1rem; /* space after icon */
     }
-    .header-container img {
-      width: 2.2rem; /* slightly bigger than "FM" text (1.8rem) */
+    .icon-container img {
+      width: 5.5rem; /* about 3x the 1.8rem h1 font size */
       height: auto;
-      display: block;
+      display: inline-block;
     }
     h1 {
       font-size: 1.8rem;
       line-height: 1.2;
-      margin: 0; /* remove default margin since container handles spacing */
+      margin: 0 0 2rem 0; /* margin bottom to separate from entries */
     }
     .entry {
       margin-bottom: 1rem;
@@ -61,10 +59,10 @@
 </head>
 <body>
 
-  <div class="header-container">
+  <div class="icon-container">
     <img src="images/ICON.png" alt="Computer Icon" />
-    <h1>FM Skyline Midiwave Industries Archive</h1>
   </div>
+  <h1>FM Skyline Midiwave Industries Archive</h1>
 
   <div class="entry">
     <a href="https://fmskyline.bandcamp.com/album/summer-2025-midiwave-quarterly">Summer 2025 Midiwave Quarterly</a>
