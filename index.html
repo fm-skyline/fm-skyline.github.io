@@ -14,12 +14,12 @@
       margin: 2rem auto;
       padding: 0 1rem;
       font-size: 1.2em;
-      text-align: left;
+      text-align: center; /* Center everything horizontally */
     }
 
     /* Icon above heading */
     .icon-container {
-      text-align: left;
+      text-align: center; /* center icon */
       margin-bottom: 0.5rem;
     }
 
@@ -33,6 +33,7 @@
       font-size: 1.8rem;
       line-height: 1.2;
       margin: 0 0 2rem 0;
+      text-align: center; /* center heading */
     }
 
     /* Album entries container */
@@ -40,10 +41,14 @@
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+      align-items: center; /* center the flex container items */
     }
 
     .entry {
       margin-bottom: 0;
+      text-align: center; /* center text inside each entry */
+      width: 100%;
+      max-width: 280px; /* keeps entries narrower in columns */
     }
 
     .cover {
@@ -51,23 +56,23 @@
       max-width: 250px;
       height: auto;
       display: block;
-      margin-bottom: 0.5rem;
+      margin: 0 auto 0.5rem auto;
     }
 
     .date {
       margin: 0;
       font-weight: normal;
       line-height: 1.2;
+      font-size: 1rem; /* smaller date font */
     }
 
     a {
-      margin: 0;
+      margin: 0 0 0.25rem 0;
       line-height: 1.2;
-      font-size: 1.3rem;
+      font-size: 1rem; /* smaller link font, matching date */
       color: #7DF9FF;
       text-decoration: underline;
       display: block;
-      margin-bottom: 0.25rem;
     }
 
     a:hover {
@@ -78,6 +83,7 @@
       margin-top: 4rem;
       font-size: 0.85rem;
       color: #111;
+      text-align: center;
     }
 
     /* Two-column layout for desktop */
@@ -86,10 +92,12 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 2rem;
+        justify-content: center; /* center columns horizontally */
       }
 
       .entry {
         width: calc(50% - 1rem);
+        max-width: none; /* allow wider entries in columns */
       }
 
       .cover {
