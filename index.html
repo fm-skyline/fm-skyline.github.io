@@ -40,7 +40,8 @@
     .entries {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      row-gap: 1.5rem;   /* vertical spacing */
+      column-gap: 3rem;  /* horizontal spacing */
       align-items: center; /* center the flex container items */
     }
 
@@ -91,7 +92,8 @@
       .entries {
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 3rem; /* increased gap between columns */
+        row-gap: 1.5rem;    /* vertical spacing */
+        column-gap: 3rem;   /* horizontal spacing */
         justify-content: center; /* center columns horizontally */
       }
 
