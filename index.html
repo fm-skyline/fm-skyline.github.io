@@ -14,12 +14,11 @@
       margin: 2rem auto;
       padding: 0 1rem;
       font-size: 1.2em;
-      text-align: center; /* Center everything horizontally */
+      text-align: center;
     }
 
-    /* Icon above heading */
     .icon-container {
-      text-align: center; /* center icon */
+      text-align: center;
       margin-bottom: 0.5rem;
     }
 
@@ -33,23 +32,22 @@
       font-size: 1.8rem;
       line-height: 1.2;
       margin: 0 0 2rem 0;
-      text-align: center; /* center heading */
+      text-align: center;
     }
 
-    /* Album entries container */
     .entries {
       display: flex;
       flex-direction: column;
-      row-gap: 1.5rem;   /* vertical spacing */
-      column-gap: 3rem;  /* horizontal spacing */
-      align-items: center; /* center the flex container items */
+      row-gap: 1.5rem;
+      column-gap: 3rem;
+      align-items: center;
     }
 
     .entry {
       margin-bottom: 0;
-      text-align: center; /* center text inside each entry */
+      text-align: center;
       width: 100%;
-      max-width: 280px; /* keeps entries narrower in columns */
+      max-width: 280px;
     }
 
     .cover {
@@ -64,13 +62,13 @@
       margin: 0;
       font-weight: normal;
       line-height: 1.2;
-      font-size: 1rem; /* date font size */
+      font-size: 1rem;
     }
 
     a {
       margin: 0 0 0.25rem 0;
       line-height: 1.2;
-      font-size: 1.3rem; /* larger link font size restored */
+      font-size: 1.3rem;
       color: #7DF9FF;
       text-decoration: underline;
       display: block;
@@ -87,19 +85,18 @@
       text-align: center;
     }
 
-    /* Two-column layout for desktop */
     @media screen and (min-width: 768px) {
       .entries {
         flex-direction: row;
         flex-wrap: wrap;
-        row-gap: 1.5rem;    /* vertical spacing */
-        column-gap: 3rem;   /* horizontal spacing */
-        justify-content: center; /* center columns horizontally */
+        row-gap: 1.5rem;
+        column-gap: 4rem; /* increased horizontal spacing */
+        justify-content: center;
       }
 
       .entry {
-        width: calc(50% - 1.5rem);
-        max-width: none; /* allow wider entries in columns */
+        width: calc(50% - 2rem); /* adjusted for new gap */
+        max-width: none;
       }
 
       .cover {
