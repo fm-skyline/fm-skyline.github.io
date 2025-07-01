@@ -1,94 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FM Skyline Midiwave Industries Archive</title>
-  <style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FM Skyline Midiwave Industries Archive</title>
+<style>
+  body {
+    font-family: Baskerville, Georgia, serif;
+    background: url('images/Scatter%20Classic.png') repeat;
+    background-color: #fff;
+    color: #111;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-size: 1.2em;
+    text-align: center; /* Center the entire page content */
+  }
+  /* Icon above heading */
+  .icon-container {
+    text-align: left;
+    margin-bottom: 0.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .icon-container img {
+    width: 7.5rem;
+    height: auto;
+    display: inline-block;
+  }
+  h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin: 0 0 2rem 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left; /* Heading text left aligned */
+  }
+  /* Container for all entries */
+  .entries {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* center the columns horizontally */
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 2rem 4rem; /* vertical 2rem, horizontal 4rem (more horizontal spacing!) */
+  }
+  .entry {
+    flex: 1 1 260px; /* fixed basis to help control width */
+    max-width: 260px;
+    margin-bottom: 2rem;
+    text-align: left; /* keep text inside entries left aligned */
+    word-break: normal; /* avoid breaking words forcibly */
+  }
+  .entry img {
+    width: 50%; /* half the width of the entry */
+    height: auto;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  a {
+    font-size: 1.3rem;
+    color: #7DF9FF;
+    text-decoration: underline; /* always underline */
+    line-height: 1.2;
+    margin: 0 0 0.3rem 0;
+    display: block;
+    white-space: nowrap; /* prevent breaking into multiple lines */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .date {
+    margin: 0;
+    font-weight: normal;
+    line-height: 1.2;
+    font-size: 1rem;
+    color: #111;
+  }
+  footer {
+    margin-top: 4rem;
+    font-size: 0.85rem;
+    color: #111;
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Responsive tweaks for mobile */
+  @media (max-width: 600px) {
+    body, .icon-container, h1, .entries, footer {
+      max-width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
     body {
-      font-family: Baskerville, Georgia, serif;
-      background: url('images/Scatter%20Classic.png') repeat;
-      background-color: #fff;
-      color: #111;
-      max-width: 600px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      font-size: 1.2em;
       text-align: left;
-    }
-    /* Style for the icon above heading */
-    .icon-container {
-      text-align: left;
-      margin-bottom: 0.5rem;
-    }
-    .icon-container img {
-      width: 7.5rem;
-      height: auto;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 1.8rem;
-      line-height: 1.2;
-      margin: 0 0 2rem 0;
     }
     .entries {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center; /* center container horizontally */
-      gap: 2rem 3rem; /* vertical 2rem, horizontal 3rem spacing */
+      flex-direction: column;
+      gap: 1.5rem 0;
     }
     .entry {
-      flex: 1 1 280px; /* basis 280px to fit nicely in 600px container with gap */
-      max-width: 280px;
-      margin-bottom: 2rem; /* vertical spacing */
-      text-align: left; /* keep text left aligned */
+      flex-basis: 100%;
+      max-width: 100%;
     }
     .entry img {
-      width: 50%; /* half the width of the entry */
-      height: auto;
-      margin-bottom: 0.5rem;
-      display: block;
+      width: 50%;
     }
     a {
-      font-size: 1.3rem;
-      color: #7DF9FF;
-      text-decoration: underline; /* always underlined */
-      line-height: 1.2;
-      margin: 0 0 0.3rem 0;
-      display: block;
-      word-break: break-word;
+      white-space: normal; /* allow wrapping on mobile */
     }
-    .date {
-      margin: 0;
-      font-weight: normal;
-      line-height: 1.2;
-      font-size: 1rem;
-      color: #111;
-    }
-    footer {
-      margin-top: 4rem;
-      font-size: 0.85rem;
-      color: #111;
-      text-align: center;
-    }
-    @media (max-width: 600px) {
-      .entries {
-        justify-content: flex-start; /* left align on small screens */
-        gap: 1.5rem 1rem;
-      }
-      .entry {
-        flex: 1 1 100%;
-        max-width: 100%;
-        margin-bottom: 1.5rem;
-      }
-      .entry img {
-        width: 50%;
-      }
-      a {
-        font-size: 1.2rem;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
 
@@ -99,52 +126,52 @@
 
   <div class="entries">
     <div class="entry">
-      <img src="images/covers/Summer%202025.jpg" alt="Summer 2025 Midiwave Quarterly Cover" />
+      <img src="images/covers/Summer%202025.jpg" alt="Summer 2025 Cover" />
       <a href="https://fmskyline.bandcamp.com/album/summer-2025-midiwave-quarterly">Summer 2025 Midiwave Quarterly</a>
       <div class="date">June 5, 2025</div>
     </div>
     <div class="entry">
-      <img src="images/covers/Spring%202025.jpg" alt="Spring 2025 Midiwave Quarterly Cover" />
+      <img src="images/covers/Spring%202025.jpg" alt="Spring 2025 Cover" />
       <a href="https://fmskyline.bandcamp.com/album/spring-2025-midiwave-quaterly">Spring 2025 Midiwave Quarterly</a>
       <div class="date">March 19, 2025</div>
     </div>
     <div class="entry">
-      <img src="images/covers/Winter%202024.jpg" alt="Winter 2024 Midiwave Quarterly Cover" />
+      <img src="images/covers/Winter%202024.jpg" alt="Winter 2024 Cover" />
       <a href="https://fmskyline.bandcamp.com/album/winter-2024-midiwave-quarterly">Winter 2024 Midiwave Quarterly</a>
       <div class="date">December 10, 2024</div>
     </div>
     <div class="entry">
-      <img src="images/covers/Fall%202024.jpg" alt="Fall 2024 Midiwave Quarterly Cover" />
+      <img src="images/covers/Fall%202024.jpg" alt="Fall 2024 Cover" />
       <a href="https://fmskyline.bandcamp.com/album/fall-2024-midiwave-quarterly">Fall 2024 Midiwave Quarterly</a>
       <div class="date">September 4, 2024</div>
     </div>
     <div class="entry">
-      <img src="images/covers/Summer%202024.jpg" alt="Summer 2024 Midiwave Quarterly Cover" />
+      <img src="images/covers/Summer%202024.jpg" alt="Summer 2024 Cover" />
       <a href="https://fmskyline.bandcamp.com/album/summer-2024-midiwave-quarterly">Summer 2024 Midiwave Quarterly</a>
       <div class="date">June 15, 2024</div>
     </div>
     <div class="entry">
-      <img src="images/covers/Spring%202024.jpg" alt="Spring 2024 Midiwave Quarterly Cover" />
+      <img src="images/covers/Spring%202024.jpg" alt="Spring 2024 Cover" />
       <a href="https://fmskyline.bandcamp.com/album/spring-2024-midiwave-quarterly">Spring 2024 Midiwave Quarterly</a>
       <div class="date">March 31, 2024</div>
     </div>
     <div class="entry">
-      <img src="images/covers/Winter%202023.jpg" alt="Winter 2023 Midiwave Quarterly Cover" />
+      <img src="images/covers/Winter%202023.jpg" alt="Winter 2023 Cover" />
       <a href="https://fmskyline.bandcamp.com/album/winter-2023-midiwave-quarterly">Winter 2023 Midiwave Quarterly</a>
       <div class="date">December 6, 2023</div>
     </div>
     <div class="entry">
-      <img src="images/covers/Fall%202023.jpg" alt="Fall 2023 Midiwave Quarterly Cover" />
+      <img src="images/covers/Fall%202023.jpg" alt="Fall 2023 Cover" />
       <a href="https://fmskyline.bandcamp.com/album/fall-2023-midiwave-quarterly">Fall 2023 Midiwave Quarterly</a>
       <div class="date">September 20, 2023</div>
     </div>
     <div class="entry">
-      <img src="images/covers/Summer%202023.jpg" alt="Summer 2023 Midiwave Quarterly Cover" />
+      <img src="images/covers/Summer%202023.jpg" alt="Summer 2023 Cover" />
       <a href="https://fmskyline.bandcamp.com/album/summer-2023-midiwave-quarterly">Summer 2023 Midiwave Quarterly</a>
       <div class="date">June 1, 2023</div>
     </div>
     <div class="entry">
-      <img src="images/covers/Spring%202023.jpg" alt="Spring 2023 Midiwave Quarterly Cover" />
+      <img src="images/covers/Spring%202023.jpg" alt="Spring 2023 Cover" />
       <a href="https://fmskyline.bandcamp.com/album/spring-2023-midiwave-quarterly">Spring 2023 Midiwave Quarterly</a>
       <div class="date">March 3, 2024</div>
     </div>
