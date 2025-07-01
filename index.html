@@ -63,13 +63,13 @@
       margin: 0;
       font-weight: normal;
       line-height: 1.2;
-      font-size: 1rem; /* smaller date font */
+      font-size: 1rem; /* date font size */
     }
 
     a {
       margin: 0 0 0.25rem 0;
       line-height: 1.2;
-      font-size: 1rem; /* smaller link font, matching date */
+      font-size: 1.3rem; /* larger link font size restored */
       color: #7DF9FF;
       text-decoration: underline;
       display: block;
@@ -91,12 +91,12 @@
       .entries {
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 2rem;
+        gap: 3rem; /* increased gap between columns */
         justify-content: center; /* center columns horizontally */
       }
 
       .entry {
-        width: calc(50% - 1rem);
+        width: calc(50% - 1.5rem);
         max-width: none; /* allow wider entries in columns */
       }
 
