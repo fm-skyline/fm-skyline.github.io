@@ -2,76 +2,91 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FM Skyline Midiwave Industries Archive</title>
   <style>
     body {
       font-family: Baskerville, Georgia, serif;
-      background: url('images/Clouds%20LIGHT.png') repeat;
+      background: url('https://fm-skyline.github.io/images/Clouds%20LIGHT.png') repeat;
       background-color: #fff;
       color: #111;
       max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
       font-size: 1.2em;
-      text-align: center;
+      text-align: left;
     }
 
     .icon-container {
-      text-align: center;
       margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
     }
 
     .icon-container img {
-      width: 10rem;
+      width: 3rem;
       height: auto;
-      display: inline-block;
+      display: block;
+      margin-right: 0.75rem;
     }
 
     h1 {
       font-size: 2.5rem;
-      line-height: 1;
-      margin: 0 0 3rem 0;
-      text-align: center;
-      white-space: pre-line;
+      line-height: 1.1;
+      margin: 0 0 0.5rem 0;
       font-weight: normal;
+      text-align: left;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px solid black;
+      margin: 2rem 0 1rem 0;
+    }
+
+    hr:first-of-type {
+      margin-top: 1rem;
+    }
+
+    h2 {
+      font-family: Baskerville, Georgia, serif;
+      font-weight: normal;
+      font-size: 1.6rem;
+      margin: 0 0 1rem 0;
+      padding-top: 0;
+      color: #111;
     }
 
     .entries {
-      display: flex;
-      flex-direction: column;
-      row-gap: 1.5rem;
-      column-gap: 3rem;
-      align-items: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem 3rem;
     }
 
     .entry {
-      margin-bottom: 0;
-      text-align: center;
-      width: 100%;
-      max-width: 280px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .entry a {
+      display: block;
     }
 
     .cover {
-      width: 100%;
-      max-width: 250px;
+      width: 150px;
       height: auto;
-      display: block;
-      margin: 0 auto 0.5rem auto;
+      border: 1px solid #ccc;
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+      cursor: pointer;
     }
 
-    a {
-      margin: 0 0 0.25rem 0;
-      line-height: 1.2;
-      font-size: 1.2rem;
+    .caption {
+      font-size: 1.1rem;
       color: #555;
-      text-decoration: none;
-      display: block;
       white-space: nowrap;
-    }
-
-    a:hover {
-      text-decoration: none;
+      user-select: none;
     }
 
     footer {
@@ -81,58 +96,31 @@
       text-align: center;
     }
 
-    @media screen and (min-width: 768px) {
-      .entries {
-        flex-direction: row;
-        flex-wrap: wrap;
-        row-gap: 1.5rem;
-        column-gap: 4rem;
-        justify-content: center;
-      }
-
-      .entry {
-        width: 300px;
-        max-width: none;
-      }
-
-      .cover {
-        width: 100%;
-      }
-    }
-
     @media screen and (max-width: 767px) {
-      .icon-container {
-        margin-bottom: 0.25rem;
+      body {
+        font-size: 1em;
       }
-
       .icon-container img {
-        width: 6rem;
+        width: 2.25rem;
+        margin-right: 0.5rem;
       }
-
       h1 {
         font-size: 1.8rem;
-        margin: 0 0 1.5rem 0;
-        white-space: normal;
+        margin-bottom: 1rem;
       }
-
+      h2 {
+        font-size: 1.3rem;
+      }
       .entries {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1.5rem 1rem;
-        justify-items: center;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
       }
-
-      .entry {
-        max-width: 160px;
-      }
-
       .cover {
-        max-width: 140px;
+        width: 100px;
       }
-
-      a {
+      .caption {
+        font-size: 1rem;
         white-space: normal;
-        font-size: 1.2rem;
       }
     }
   </style>
@@ -140,53 +128,88 @@
 <body>
 
   <div class="icon-container">
-    <img src="images/ICON.png" alt="Computer Icon" />
+    <img src="https://fm-skyline.github.io/images/ICON.png" alt="Computer Icon" />
   </div>
 
   <h1>FM Skyline Midiwave Industries Archive</h1>
+  <hr />
 
+  <hr />
+  <h2>2025</h2>
   <div class="entries">
     <div class="entry">
-      <img class="cover" src="images/covers/Summer 2025.jpg" alt="Summer 2025 Cover" />
-      <a href="https://fmskyline.bandcamp.com/album/summer-2025-midiwave-quarterly">Summer 2025</a>
+      <a href="https://fmskyline.bandcamp.com/album/summer-2025-midiwave-quarterly">
+        <img class="cover" src="https://fm-skyline.github.io/images/covers/Summer%202025.jpg" alt="Summer 2025 Cover" />
+      </a>
+      <div class="caption">Summer 2025</div>
     </div>
     <div class="entry">
-      <img class="cover" src="images/covers/Spring 2025.jpg" alt="Spring 2025 Cover" />
-      <a href="https://fmskyline.bandcamp.com/album/spring-2025-midiwave-quaterly">Spring 2025</a>
-    </div>
-    <div class="entry">
-      <img class="cover" src="images/covers/Winter 2024.jpg" alt="Winter 2024 Cover" />
-      <a href="https://fmskyline.bandcamp.com/album/winter-2024-midiwave-quarterly">Winter 2024</a>
-    </div>
-    <div class="entry">
-      <img class="cover" src="images/covers/Fall 2024.jpg" alt="Fall 2024 Cover" />
-      <a href="https://fmskyline.bandcamp.com/album/fall-2024-midiwave-quarterly">Fall 2024</a>
-    </div>
-    <div class="entry">
-      <img class="cover" src="images/covers/Summer 2024.jpg" alt="Summer 2024 Cover" />
-      <a href="https://fmskyline.bandcamp.com/album/summer-2024-midiwave-quarterly">Summer 2024</a>
-    </div>
-    <div class="entry">
-      <img class="cover" src="images/covers/Spring 2024.jpg" alt="Spring 2024 Cover" />
-      <a href="https://fmskyline.bandcamp.com/album/spring-2024-midiwave-quarterly">Spring 2024</a>
-    </div>
-    <div class="entry">
-      <img class="cover" src="images/covers/Winter 2023.jpg" alt="Winter 2023 Cover" />
-      <a href="https://fmskyline.bandcamp.com/album/winter-2023-midiwave-quarterly">Winter 2023</a>
-    </div>
-    <div class="entry">
-      <img class="cover" src="images/covers/Fall 2023.jpg" alt="Fall 2023 Cover" />
-      <a href="https://fmskyline.bandcamp.com/album/fall-2023-midiwave-quarterly">Fall 2023</a>
-    </div>
-    <div class="entry">
-      <img class="cover" src="images/covers/Summer 2023.jpg" alt="Summer 2023 Cover" />
-      <a href="https://fmskyline.bandcamp.com/album/summer-2023-midiwave-quarterly">Summer 2023</a>
-    </div>
-    <div class="entry">
-      <img class="cover" src="images/covers/Spring 2023.jpg" alt="Spring 2023 Cover" />
-      <a href="https://fmskyline.bandcamp.com/album/spring-2023-midiwave-quarterly">Spring 2023</a>
+      <a href="https://fmskyline.bandcamp.com/album/spring-2025-midiwave-quaterly">
+        <img class="cover" src="https://fm-skyline.github.io/images/covers/Spring%202025.jpg" alt="Spring 2025 Cover" />
+      </a>
+      <div class="caption">Spring 2025</div>
     </div>
   </div>
+
+  <hr />
+  <h2>2024</h2>
+  <div class="entries">
+    <div class="entry">
+      <a href="https://fmskyline.bandcamp.com/album/winter-2024-midiwave-quarterly">
+        <img class="cover" src="https://fm-skyline.github.io/images/covers/Winter%202024.jpg" alt="Winter 2024 Cover" />
+      </a>
+      <div class="caption">Winter 2024</div>
+    </div>
+    <div class="entry">
+      <a href="https://fmskyline.bandcamp.com/album/fall-2024-midiwave-quarterly">
+        <img class="cover" src="https://fm-skyline.github.io/images/covers/Fall%202024.jpg" alt="Fall 2024 Cover" />
+      </a>
+      <div class="caption">Fall 2024</div>
+    </div>
+    <div class="entry">
+      <a href="https://fmskyline.bandcamp.com/album/summer-2024-midiwave-quarterly">
+        <img class="cover" src="https://fm-skyline.github.io/images/covers/Summer%202024.jpg" alt="Summer 2024 Cover" />
+      </a>
+      <div class="caption">Summer 2024</div>
+    </div>
+    <div class="entry">
+      <a href="https://fmskyline.bandcamp.com/album/spring-2024-midiwave-quarterly">
+        <img class="cover" src="https://fm-skyline.github.io/images/covers/Spring%202024.jpg" alt="Spring 2024 Cover" />
+      </a>
+      <div class="caption">Spring 2024</div>
+    </div>
+  </div>
+
+  <hr />
+  <h2>2023</h2>
+  <div class="entries">
+    <div class="entry">
+      <a href="https://fmskyline.bandcamp.com/album/winter-2023-midiwave-quarterly">
+        <img class="cover" src="https://fm-skyline.github.io/images/covers/Winter%202023.jpg" alt="Winter 2023 Cover" />
+      </a>
+      <div class="caption">Winter 2023</div>
+    </div>
+    <div class="entry">
+      <a href="https://fmskyline.bandcamp.com/album/fall-2023-midiwave-quarterly">
+        <img class="cover" src="https://fm-skyline.github.io/images/covers/Fall%202023.jpg" alt="Fall 2023 Cover" />
+      </a>
+      <div class="caption">Fall 2023</div>
+    </div>
+    <div class="entry">
+      <a href="https://fmskyline.bandcamp.com/album/summer-2023-midiwave-quarterly">
+        <img class="cover" src="https://fm-skyline.github.io/images/covers/Summer%202023.jpg" alt="Summer 2023 Cover" />
+      </a>
+      <div class="caption">Summer 2023</div>
+    </div>
+    <div class="entry">
+      <a href="https://fmskyline.bandcamp.com/album/spring-2023-midiwave-quarterly">
+        <img class="cover" src="https://fm-skyline.github.io/images/covers/Spring%202023.jpg" alt="Spring 2023 Cover" />
+      </a>
+      <div class="caption">Spring 2023</div>
+    </div>
+  </div>
+
+  <hr />
 
   <footer>
     This page is maintained by FM Skyline. For subscribers only – please don’t share this link.
