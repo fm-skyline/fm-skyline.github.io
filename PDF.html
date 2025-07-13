@@ -1,1 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FM Skyline Midiwave Industries Archive</title>
+  <style>
+    body {
+      font-family: Baskerville, Georgia, serif;
+      background: url('https://fm-skyline.github.io/images/Clouds%20LIGHT.png') repeat;
+      background-color: #fff;
+      color: #111;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      font-size: 1.2em;
+      text-align: left;
+    }
+
+    .icon-container {
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .icon-container img {
+      width: 3rem;
+      height: auto;
+      display: block;
+      margin-right: 0.75rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      line-height: 1.1;
+      margin: 0 0 0.5rem 0;
+      font-weight: normal;
+      text-align: left;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px solid black;
+      margin: 2rem 0 1rem 0;
+    }
+
+    h2 {
+      font-family: Baskerville, Georgia, serif;
+      font-weight: normal;
+      font-size: 1.6rem;
+      margin: 0 0 1rem 0;
+      padding-top: 0;
+      color: #111;
+    }
+
+    .entries {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem 3rem;
+    }
+
+    .entry {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .entry a {
+      display: block;
+    }
+
+    .cover {
+      width: 150px; /* scaled down for proportionality */
+      height: auto;
+      border: 1px solid #ccc;
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+
+    .caption {
+      font-size: 1.1rem;
+      color: #555;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .archive-link {
+      display: inline-block;
+      font-size: 1.1rem;
+      margin: 2rem 0 1.5rem 0;
+    }
+
+    footer {
+      font-size: 0.85rem;
+      color: #111;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 767px) {
+      .entries {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .cover {
+        width: 100px;
+      }
+      .caption {
+        white-space: normal;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="icon-container">
+    <img src="https://fm-skyline.github.io/images/ICON.png" alt="Computer Icon" />
+  </div>
+
+  <h1>FM Skyline Midiwave Industries Archive</h1>
+  <hr />
+  <hr />
+
+  <h2>Magazine PDFs</h2>
+  <div class="entries">
+    <div class="entry">
+      <a href="https://fm-skyline.github.io/pdf/magazine-summer-2024.pdf" target="_blank">
+        <img class="cover" src="https://fm-skyline.github.io/images/PDF%20covers/magazine-summer-2024.png" alt="Summer 2024 PDF" />
+      </a>
+      <div class="caption">Summer 2024</div>
+    </div>
+    <div class="entry">
+      <a href="https://fm-skyline.github.io/pdf/magazine-spring-2024.pdf" target="_blank">
+        <img class="cover" src="https://fm-skyline.github.io/images/PDF%20covers/magazine-spring-2024.png" alt="Spring 2024 PDF" />
+      </a>
+      <div class="caption">Spring 2024</div>
+    </div>
+    <!-- Add more entries as needed in the same format -->
+  </div>
+
+  <hr />
+  <a href="index.html" class="archive-link">Back to Main Archive</a>
+  <hr />
+
+  <footer>
+    This page is maintained by FM Skyline. For subscribers only – please don’t share this link.
+  </footer>
+</body>
+</html>
 
